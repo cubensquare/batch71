@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+       app: icici
+  template
+    metadata:
+      name: test
+      labels:
+       app: icici
+    spec:
+      containers:
+      - name: container
+        image: nginx
